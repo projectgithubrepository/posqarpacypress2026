@@ -6,7 +6,7 @@ describe('Testes de capturia', () => {
     // Se for um Treinador da lista (clássico) e um pokemon da lista
     // Exibe uma mensagem especial
     // Criar um teste com treinador ou pokemon fora da lista
-    // Cirar um setundo teste com treinador e pokemon das listas
+    // Cirar um segundo teste com treinador e pokemon das listas
 
     it('Capturar um pokemon como um Treinador Qualquer', () => {
         cy.visit('https://angelofdiasg.tech/qaprogramador/ginasiodecapturia/')
