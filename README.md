@@ -1,12 +1,17 @@
 # posqarpacypress2026
 Repositório base com projeto Cypress atual intalado, configurado e completo.
 
-extensões vscode:
+## Extensões do VS Code
 
-alexkrechik.cucumberautocomplete
-andrew-codes.cypress-snippets
-cucumberopen.cucumber-official
-pkief.material-icon-theme (melhor o outro de icones)
-ritwickdey.liveserver
-spoonscen.es6-mocha-snippets
-vscode-icons-team.vscode-icons (melhor)
+- Cucumber (Gherkin) Full Support
+  - `alexkrechik.cucumberautocomplete`
+- Cypress Snippets
+  - `andrew-codes.cypress-snippets`
+- Cucumber Official
+  - `cucumberopen.cucumber-official`
+- Live Server
+  - `ritwickdey.liveserver`
+- ES6 Mocha Snippets
+  - `spoonscen.es6-mocha-snippets`
+- VSCode Icons (recomendado)
+  - `vscode-icons-team.vscode-icons`
