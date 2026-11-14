@@ -35,20 +35,24 @@ Given("que estou logado na vitrine de produtos com o perfil {string}", (perfil) 
 // Nos passos de interação e validação da tela, o Page Object brilha!
 // Repare como não existe NENHUM cy.get() dentro do arquivo de Steps:
 
-When("adiciono o produto {string} na vitrine", (nomeProduto) => {
+When("adiciono o produto {string} ao carrinho", (nomeProduto) => {
   ProductsPage.clicarBotaoDoProduto(nomeProduto);
 });
 
-When("removo o produto {string} na vitrine", (nomeProduto) => {
+When("removo o produto {string} do carrinho", (nomeProduto) => {
   ProductsPage.clicarBotaoDoProduto(nomeProduto);
 });
 
-When("ordeno os produtos pela opção {string}", (opcaoOrdenacao) => {
-  ProductsPage.selecionarOrdenacao(opcaoOrdenacao);
+When("ordeno os produtos do menor para o maior preço", () => {
+  ProductsPage.selecionarOrdenacao("Price (low to high)");
 });
 
 Then("o badge do carrinho deve mostrar {string}", (quantidade) => {
-  ProductsPage.validarQuantidadeCarrinho(quantidade);
+  if (quantidade === "0") {
+    ProductsPage.validarCarrinhoVazio();
+  } else {
+    ProductsPage.validarQuantidadeCarrinho(quantidade);
+  }
 });
 
 Then("o badge do carrinho não deve existir", () => {
