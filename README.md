@@ -1,6 +1,10 @@
 # posqarpacypress2026
 Repositório base com projeto Cypress atual intalado, configurado e completo.
 
+## Sobre esta branch
+
+`atividade-professor` partiu da branch `professor/cypress-bdd`, com o código do repositório do professor. Aqui estão os fluxos BDD de login e produtos, organizados com Page Objects, App Actions e fixtures, além dos ajustes feitos nesta branch.
+
 
 ## Extensões do VS Code
 
