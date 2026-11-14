@@ -1,3 +1,4 @@
+
 # language: pt
 
 Funcionalidade: Login no SauceDemo
@@ -21,14 +22,15 @@ Funcionalidade: Login no SauceDemo
     Então devo ver uma mensagem de erro "Epic sadface: Username and password do not match any user in this service"
 
   Esquema do Cenário: Tentar login com credenciais inválidas ou bloqueadas (<cenario>)
-    Quando realizo login usando o usuário "<usuario>" e a senha "<senha>"
-    Então devo ver uma mensagem de erro "<mensagem_esperada>"
+    Quando realizo login usando o perfil "<perfil>" da fixture
+    Então devo ver a mensagem de erro cadastrada para o perfil "<perfil>"
 
     Exemplos:
-      | cenario           | usuario         | senha        | mensagem_esperada                                                          |
-      | Usuario Bloqueado | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out.                        |
-      | Senha incorreta   | standard_user   | senha_errada | Epic sadface: Username and password do not match any user in this service  |
+      | cenario           | perfil         |
+      | Usuario Bloqueado | bloqueado      |
+      | Senha incorreta   | senha_invalida |
+      | Usuário em branco | usuario_vazio  |
 
   Cenário: Login usuário válido usando Fixture
     Quando realizo login usando o perfil "valido" da fixture
-    Então devo ser redirecionado para a vitrine de produtos
+    Então devo ser redirecionado para a página de produtos
