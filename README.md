@@ -1,6 +1,10 @@
 # posqarpacypress2026
 Repositório base com projeto Cypress atual intalado, configurado e completo.
 
+## Sobre esta branch
+
+`cypress_bdd` mantém os testes Cypress existentes e adiciona BDD com Cucumber: os cenários ficam em arquivos `.feature` e suas definições em `cypress/e2e/steps/`. Inclui um cenário de solicitação de crédito.
+
 ## Extensões do VS Code
 
 ### Instaladas neste ambiente
