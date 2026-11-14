@@ -7,6 +7,7 @@ Funcionalidade: Login no SauceDemo
   Contexto:
     Dado que estou na página inicial do SauceDemo
 
+    @loginValido
     Cenário: Login com usuário e senha válidos
         Quando realizo login usando o usuário "standard_user" e a senha "secret_sauce"
          Então devo ser redirecionado para a vitrine de produtos
@@ -32,3 +33,14 @@ Funcionalidade: Login no SauceDemo
     Cenário: Login com usuário válido usando Fixture
         Quando realizo login usando o perfil "valido" da fixture
         Então devo ser redirecionado para a vitrine de produtos
+
+  Esquema do Cenário: Validar bloqueio e falhas de login por perfil (<descricao_cenario>)
+    Quando realizo login usando o perfil "<perfil>" da fixture
+    Então devo ver a mensagem de erro correspondente ao perfil "<perfil>"
+
+    Exemplos:
+      | descricao_cenario | perfil         |
+      | Usuário bloqueado | bloqueado      |
+      | Senha incorreta   | senha_invalida |
+      | Usuário em branco | usuario_vazio  |
+      | Senha em branco   | senha_vazia    |

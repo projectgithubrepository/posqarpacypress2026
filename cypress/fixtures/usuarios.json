@@ -12,5 +12,15 @@
         "usuario": "standard_user",
         "senha": "123456",
         "msgErro": "Epic sadface: Username and password do not match any user in this service"
+  },
+  "usuario_vazio": {
+    "usuario": "",
+    "senha": "secret_sauce",
+    "msgErro": "Epic sadface: Username is required"
+  },
+  "senha_vazia": {
+    "usuario": "standard_user",
+    "senha": "",
+    "msgErro": "Epic sadface: Password is required"
   }
 }

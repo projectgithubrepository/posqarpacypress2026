@@ -29,3 +29,29 @@ When("realizo login usando o perfil {string} da fixture", (perfil) => {
         cy.get("#login-button").click();
     });
 });
+
+// Método sem validação de digitação "cy.type" vazio.
+// Then("devo ver a mensagem de erro correspondente ao perfil {string}", (perfil) => {
+//   cy.fixture("usuarios").then((massa) => {
+//     cy.get('[data-test="error"]')
+//       .should("be.visible")
+//       .and("contain.text", massa[perfil].msgErro);
+//   });
+// });
+
+//Garante que o cy.type() não seja chamado com string vazia, evitando o erro "cy.type() must be called with a non-empty string"
+When("realizo login usando o perfil {string} da fixture", (perfil) => {
+  cy.fixture("usuarios").then((massa) => {
+    const dados = massa[perfil];
+
+    cy.get('[data-test="username"]').clear();
+    if (dados.usuario) {
+      cy.get('[data-test="username"]').type(dados.usuario);
+    }
+    cy.get('[data-test="password"]').clear();
+    if (dados.senha) {
+      cy.get('[data-test="password"]').type(dados.senha);
+    }
+    cy.get('[data-test="login-button"]').click();
+  });
+});
