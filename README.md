@@ -1,6 +1,10 @@
 # posqarpacypress2026
 Repositório base com projeto Cypress atual intalado, configurado e completo.
 
+## Sobre esta branch
+
+`cypress_bdd14nov` reúne cenários BDD com Cucumber para login e vitrine de produtos, usando fixtures para os dados de usuário. Também contém diretórios preparados para os próximos fluxos de carrinho e checkout.
+
 ## Extensões do VS Code
 
 ### Instaladas neste ambiente
