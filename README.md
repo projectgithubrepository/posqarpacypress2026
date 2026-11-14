@@ -1,6 +1,10 @@
 # posqarpacypress2026
 Repositório base com projeto Cypress atual intalado, configurado e completo.
 
+## Sobre esta branch
+
+`main` é a base do projeto, com testes Cypress escritos diretamente em arquivos `.cy.js`, organizados em login e desafios. Esta branch não usa o preprocessor Cucumber/BDD.
+
 ## Extensões do VS Code
 
 ### Instaladas neste ambiente
